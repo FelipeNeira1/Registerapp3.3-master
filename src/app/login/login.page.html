@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> RegisterApp </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+    <ion-toolbar>
+      <ion-img src="assets/Banner.png" style="width : 100% ; height : 100%"></ion-img>
+    </ion-toolbar>
+    <!-- Se usa la persistencia -->
+    <div class="center">
+      <ion-img src="assets/Usuario.png" style="width : 25% ; height : 25%"></ion-img>
+  </div>
+  <br>
+    <ion-text class="center letra" position="floating">Bienvenido {{usuario}}</ion-text>
+
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button routerLink="/usuario" class="button">
+          <ion-icon name="person-circle"></ion-icon>
+          <ion-label>Usuario</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button routerLink="/usuario" class="button">
+          <ion-icon name="book-outline"></ion-icon>
+          <ion-label>Registros</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button class="button" (click)="camara()">
+          {{code}}
+          <img *ngIf="image" [src]="image" alt="image">
+          <ion-icon name="qr-code-outline"></ion-icon>
+          <ion-label>QR</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button routerLink="/opsqr" class="button" >
+          <ion-icon name="qr-code-outline"></ion-icon>
+          <ion-label>QR page</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button routerLink="/home" class="button">
+          <ion-icon name="log-out-outline"></ion-icon>
+          <ion-label>Salir</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs> 
+</ion-content>

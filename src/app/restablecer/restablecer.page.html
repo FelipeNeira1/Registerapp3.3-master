@@ -1,0 +1,41 @@
+<!-- TITULO -->
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Restablecer</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<!-- CONTENIDO CENTRAL DE LA PAGE -->
+<ion-content>
+    <div id="container">
+        <ion-item>
+            <ion-img src="assets/Banner.png"></ion-img>
+        </ion-item>
+        <br>
+        <!-- INSTRUCCION PARA EL INPUT -->
+        <br>
+            <ion-label class=letra position="floating">Ingresa tu usuario</ion-label>
+        <br>
+        <!-- INPUT CORREO PARA RECUPERAR -->
+        <ion-item>
+            <ion-label position="floating">Usuario</ion-label>
+            <ion-input></ion-input>
+        </ion-item>      
+        <!-- BOTON PARA ENVIAR EL CORREO DE RECUPERACION -->
+        <br>
+            <a class="button" (click)="restablecer()">Enviar solicitud</a>
+        <br>
+        <!-- BOTON PARA VOLVER A LA PAGINA DE INICIO -->
+        <br>
+            <a class="button" (click)="close()">Volver</a>
+        <br>
+        <!-- DATOS MESA DE SERVICIO -->
+        <br>
+        <br>
+        <br>
+        <ion-label position="floating">Mesa de Servicios</ion-label>
+        <br>
+        <ion-label position="floating">(+56) 44220 1098</ion-label>
+
+    </div>
+</ion-content>

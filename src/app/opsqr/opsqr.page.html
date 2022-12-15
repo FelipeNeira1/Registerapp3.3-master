@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> RegisterApp </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+   <!-- Se usa la persistencia -->
+    <ion-toolbar>
+      <ion-img src="assets/Banner.png" style="width : 100% ; height : 100%"></ion-img>
+    </ion-toolbar>
+    <br> <br> <br>
+    <br> <br> <br>
+    <!-- <a style="width : 66%;" src="assets/qr.png"  (click)="camara()" class="button center"></a> -->
+    <div id="container">
+    <!-- Boton Escanear QR -->
+    <img src="assets/qr.png" style="width : 25% ;  height : 15%" class="centro" (click)="camara()">
+    <div>
+    <ion-text class="center letra" position="floating">Escanear QR</ion-text>
+    </div>
+    <br><br>
+    <ion-text class="center letra" position="floating">Lista QR:</ion-text> 
+    {{scannedData}}
+    <br><br><br>
+    <br>
+    <br>
+    <!-- input datos QR -->
+    <br>
+    <br>
+    <!-- Boton Generar QR -->
+    <img src="assets/qr.png" style="width : 25% ;  height : 15%" class="centro" (click)="sendMail()">
+    <div>
+    <ion-text class="center letra" position="floating">Generar QR </ion-text> 
+    
+    </div>
+    </div>
+</ion-content>
